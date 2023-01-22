@@ -9,10 +9,6 @@ const Card = () => {
   const {githubUser}=useContext(GithubContext)
   const {avatar_url,html_url,name,company,blog,bio,location,twitter_username}= githubUser
 
-console.log(blog)
-console.log(company)
-
-
   return <Wrapper>
     <header>
       <img src={avatar_url} alt={name} />
