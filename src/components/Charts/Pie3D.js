@@ -19,13 +19,14 @@ const Pie3D = ({data}) => {
     chart: {
       
             caption :"Languages",
+            pieRadius:"45%",
             // subCaption= "Last year",
             // enableSmartLabels= 0,
             // startingAngle= 0,
             // showPercentValues=1,
-            // decimals= 1,
+             decimals: 1,
             // useDataPlotColorForLabels= 1,
-            // theme= fusion
+             theme: "fusion"
         },
         data
       }
