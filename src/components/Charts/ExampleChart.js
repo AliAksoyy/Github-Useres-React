@@ -1,6 +1,6 @@
 // STEP 1 - Include Dependencies
 // Include react
-import React from "react";
+import React, { useContext } from "react";
 
 
 // Include the react-fusioncharts component
@@ -14,45 +14,14 @@ import Column2D from "fusioncharts/fusioncharts.charts";
 
 // Include the theme as fusion
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
+import { GithubContext } from "../../context/context";
 
 // Adding the chart and theme as dependency to the core fusioncharts
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 
 // STEP 2 - Chart Data
-const chartData = [
-  {
-    label: "Venezuela",
-    value: "290"
-  },
-  {
-    label: "Saudi",
-    value: "260"
-  },
-  {
-    label: "Canada",
-    value: "180"
-  },
-  {
-    label: "Iran",
-    value: "140"
-  },
-  {
-    label: "Russia",
-    value: "115"
-  },
-  {
-    label: "UAE",
-    value: "100"
-  },
-  {
-    label: "US",
-    value: "30"
-  },
-  {
-    label: "China",
-    value: "30"
-  }
-];
+const chartData =repos()
+
 
 // STEP 3 - Creating the JSON object to store the chart configurations
 const chartConfigs = {
@@ -82,7 +51,8 @@ const chartConfigs = {
 
 
 const ChartComponent = () => {
-
+const {repos}=useContext(GithubContext)
+console.log(repos)
   return (<ReactFC {...chartConfigs} />);
 }
 

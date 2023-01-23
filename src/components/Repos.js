@@ -5,9 +5,9 @@ import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts';
 const Repos = () => {
   const {repos}=useContext(GithubContext)
 
-  return <section>
-    <Wrapper>
-  <ExampleChart />
+  return <section className='section'>
+    <Wrapper className='section-center'>
+     <ExampleChart />
 
     </Wrapper>
   </section>
