@@ -9,22 +9,28 @@ ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 const ChartComponent = () => {
   const {repos}=useContext(GithubContext)
   console.log(repos)
- const chartData=[
-  {
-    label:"HTML",
-    value:13
-  },
-  {
-    label:"Javascript",
-    value:123
-  },
-  {
-    label:"CSS",
-    value:45
+//  const chartData=[
+//   {
+//     label:"HTML",
+//     value:13
+//   },
+//   {
+//     label:"Javascript",
+//     value:123
+//   },
+//   {
+//     label:"CSS",
+//     value:45
+//   }
+//  ]
+const chartDatas=repos.map((item)=> {
+  return {
+    label:"java",
+    value:item.watchers
   }
- ]
- console.log(chartData);
-const chartConfigs = {
+})
+ const chartData=chartDatas.slice(0,6)
+ const chartConfigs = {
   type: "column2d", // The chart type
   width: "400", // Width of the chart
   height: "400", // Height of the chart
