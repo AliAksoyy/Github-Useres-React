@@ -6,10 +6,17 @@ const Repos = () => {
   const {repos}=useContext(GithubContext)
 
   const chartData=repos.reduce((total,item)=> {
-      console.log(total)
-      console.log(repos);
-      console.log(item)
+    const {language}=item
+    console.log(language);
+    if(!language) return total
+    if(!total[language]){
+      total[language]={label:language, value:1}
+    }else {
+      total[language]={...total[language], value:total[language].value +1}
+    }
+    return total
   })
+ console.log(chartData)
 
   return <section className='section'>
     <Wrapper className='section-center'>
