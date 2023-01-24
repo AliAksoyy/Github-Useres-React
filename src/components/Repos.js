@@ -5,26 +5,23 @@ import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts';
 const Repos = () => {
   const {repos}=useContext(GithubContext)
 
-  let chartData=repos.reduce((total,item)=> {
+  
+  const chartData=repos.reduce((total,item)=> {
     const {language}=item
-    // console.log(language);
-     if(!language){
-    
-      return total
-     }
-     if(!total[language]){
-      total[language]={label:language,value:1}
-     }else {
-      total[language]={
-        ...total[language], value:total[language].value +1
-      }
-     }
+    if(!language) return total
+    if(!total[language]){
+      total[language]= {label:language, value:1}
+    }else {
+     total[language]= {...total[language], value:total[language].value +1}
+    }
     return total
   },{})
-    
- chartData=Object.values(chartData).sort((a,b)=> {
+   chartData=Object.values(chartData).sort((a,b)=> {
     return b.value - a.value
- }).slice(0,5)
+   })
+
+
+
 console.log(chartData)
   return <section className='section'>
     <Wrapper className='section-center'>
