@@ -6,7 +6,7 @@ const Repos = () => {
   const {repos}=useContext(GithubContext)
 
   
-  const chartData=repos.reduce((total,item)=> {
+  let chartData=repos.reduce((total,item)=> {
     const {language}=item
     if(!language) return total
     if(!total[language]){
@@ -18,7 +18,7 @@ const Repos = () => {
   },{})
    chartData=Object.values(chartData).sort((a,b)=> {
     return b.value - a.value
-   })
+   }).slice(0,5)
 
 
 
