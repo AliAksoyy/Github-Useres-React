@@ -18,7 +18,7 @@ const Repos = () => {
   },{})
    chartData=Object.values(chartData).sort((a,b)=> {
     return b.value - a.value
-   }).slice(0,4)
+   }).slice(0,5)
 
 
 
