@@ -8,6 +8,7 @@ import { GithubContext } from '../context/context';
 
 const Search = () => {
   const [user,setUser]=useState("")
+  const {request}=useContext(GithubContext)
   
 
   const handleSubmit=(e)=> {
@@ -22,7 +23,8 @@ const Search = () => {
         <input type="search" placeholder='Enter Github User' name='user' id='user' value={user} onChange={(e)=>setUser(e.target.value)}/>
         <button type='submit'>Search</button>
       </form>
-      <h3>Requests : <span>60</span><span> / 60</span></h3>
+      {request?.remaining &&  <h3>Requests : {request?.remaining} / 60</h3>}
+     
     </Wrapper> 
   </section>;
 };

@@ -17,11 +17,17 @@ const GithubProvider =({children})=> {
     const [request,setRequest]=useState(0)
     const [loading, setLoading] = useState(false)
     
-    useEffect(()=>{checkRequest()},[])
     const checkRequest=()=>{
-        axios(`${rootUrl}/rate_limit`).then(({data})=>setRequest(data))
+        axios(`${rootUrl}/rate_limit`).then(({data})=>{
+            const {rate:remaining}=data
+            setRequest(remaining)
+            if(remaining===0){
+                // erorr
+            }
+        }).catch(err=>console.log(err))
     }
-
+    useEffect(()=>{checkRequest()},[])
+console.log(request)
     return (<GithubContext.Provider value={{githubUser,repos,followers,request}}>{children}</GithubContext.Provider>)
 }
 
