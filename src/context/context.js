@@ -36,7 +36,7 @@ const GithubProvider =({children})=> {
             if(repos.status===status){
                 setRepos(repos.value.data)
             }
-           })
+           }).catch(err=>console.log(err))
         }else{
             toggleError(true,"there is no user with that username")
         }
