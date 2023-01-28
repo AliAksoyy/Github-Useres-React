@@ -8,9 +8,8 @@ import { GithubContext } from '../context/context';
 
 const Search = () => {
   const [user,setUser]=useState("")
-  const {request}=useContext(GithubContext)
+  const {request,error}=useContext(GithubContext)
   
-
   const handleSubmit=(e)=> {
     e.preventDefault()
     setUser("")
@@ -18,6 +17,11 @@ const Search = () => {
   
   return <section className='section'>
     <Wrapper className='section-center'>
+    {error.show && 
+      <ErrorWrapper>
+        <p>{error.msg}</p>
+      </ErrorWrapper>
+    }
       <form className="form-control" onSubmit={handleSubmit}>
         <MdSearch />
         <input type="search" placeholder='Enter Github User' name='user' id='user' value={user} onChange={(e)=>setUser(e.target.value)}/>
