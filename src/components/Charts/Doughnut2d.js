@@ -11,7 +11,7 @@ const Doughnut2D = ({data}) => {
  
  const chartConfigs = {
   type: "doughnut2d", // The chart type
-  width: "400", // Width of the chart
+  width: "100%", // Width of the chart
   height: "400", // Height of the chart
   dataFormat: "json", // Data type
   dataSource: {
@@ -24,7 +24,7 @@ const Doughnut2D = ({data}) => {
             // enableSmartLabels= 0,
             // startingAngle= 0,
             showPercentValues:0,
-             decimals: 1,
+             decimals: 0,
             // useDataPlotColorForLabels= 1,
              theme: "candy"
         },
