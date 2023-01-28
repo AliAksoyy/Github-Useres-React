@@ -22,6 +22,11 @@ const GithubProvider =({children})=> {
         toggleError()
         setLoading(true)
          const {data}= await axios(`${rootUrl}/users/${user}`).catch(err=>console.log(err))
+         const ali=await axios(`${rootUrl}/users/${user}/followers`).catch(err=>console.log(err))
+         const repos=await axios(`${rootUrl}/users/${user}/repos?per_page=100`).catch(err=>console.log(err))
+         setFollowers(ali.data)
+         console.log(repos);
+         setRepos(repos.data)
         if(data){
             setGithubUser(data)
         }else{

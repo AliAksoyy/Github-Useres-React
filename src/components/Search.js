@@ -29,7 +29,7 @@ const Search = () => {
       <form className="form-control" onSubmit={handleSubmit}>
         <MdSearch />
         <input type="search" placeholder='Enter Github User' name='user' id='user' value={user} onChange={(e)=>setUser(e.target.value)}/>
-        {request?.remaining > 0 && loading && <button type='submit'>Search</button>}
+        {request?.remaining > 0 && !loading && <button type='submit'>Search</button>}
         
       </form>
      
