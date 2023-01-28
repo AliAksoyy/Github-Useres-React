@@ -24,15 +24,15 @@ const Repos = () => {
 
    const mostPopular = Object.values(chartData).sort((a,b)=> {
     return b.stars - a.stars
+   }).map((item)=> {
+    return  {...item, value:item.stars}
    }).slice(0,5)
-
-
 
   return <section className='section'>
     <Wrapper className='section-center'>
     <Pie3D data={mostUsed} />
-    <div></div>
-      <Doughnut2D data={mostUsed}/>
+    <Column3D data={mostUsed} />
+      <Doughnut2D data={mostPopular}/>
       <div></div>
 
     </Wrapper>

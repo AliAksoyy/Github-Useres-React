@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import ReactFC from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
 import Pie3d from "fusioncharts/fusioncharts.charts";
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
-import { GithubContext } from "../../context/context";
+
 
 ReactFC.fcRoot(FusionCharts, Pie3d, FusionTheme);
 const Pie3D = ({data}) => {
-  const {repos}=useContext(GithubContext)
+ 
  
  const chartConfigs = {
   type: "pie3d", // The chart type
