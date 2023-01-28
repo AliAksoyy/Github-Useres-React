@@ -1,11 +1,11 @@
 import React from "react";
 import ReactFC from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
-import Bar3d from "fusioncharts/fusioncharts.charts";
+import Chart from "fusioncharts/fusioncharts.charts";
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 
 
-ReactFC.fcRoot(FusionCharts, Bar3d, FusionTheme);
+ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 const Bar3D = ({data}) => {
   
  
@@ -18,13 +18,13 @@ const Bar3D = ({data}) => {
     // Chart Configuration
     chart: {
       
-            caption :"Most popular",
+            caption :"Most Forked",
             theme: "fusion",
             decimals: 1,
             xAxisName: "Repos",
             xAxisNameFontSize: "16px",
             yAxisNameFontSize: "16px",
-            yAxisName: "Stars",
+            yAxisName: "Forks",
         
         },
         data:data
@@ -34,7 +34,6 @@ const Bar3D = ({data}) => {
       }
 
 export default Bar3D
-
 
 
 

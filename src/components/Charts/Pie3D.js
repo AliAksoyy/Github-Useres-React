@@ -1,11 +1,11 @@
 import React from "react";
 import ReactFC from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
-import Pie3d from "fusioncharts/fusioncharts.charts";
+import Chart from "fusioncharts/fusioncharts.charts";
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 
 
-ReactFC.fcRoot(FusionCharts, Pie3d, FusionTheme);
+ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 const Pie3D = ({data}) => {
  
  

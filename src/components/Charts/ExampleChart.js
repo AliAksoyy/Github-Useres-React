@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import ReactFC from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
 import Bar3d from "fusioncharts/fusioncharts.charts";

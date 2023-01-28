@@ -1,11 +1,11 @@
 import React from "react";
 import ReactFC from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
-import Dougnut2d from "fusioncharts/fusioncharts.charts";
+import Chart from "fusioncharts/fusioncharts.charts";
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 
 
-ReactFC.fcRoot(FusionCharts, Dougnut2d, FusionTheme);
+ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 const Doughnut2D = ({data}) => {
   
  
