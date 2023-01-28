@@ -34,14 +34,13 @@ const Repos = () => {
     total.forks[stargazers_count]={label:name, value:forks}
     return total
    },{stars:{},forks:{}})
-   console.log(stars)
-   console.log(forks)
+   stars=Object.values(stars)
 
 
   return <section className='section'>
     <Wrapper className='section-center'>
       <Pie3D data={mostUsed} />
-      <Column3D data={chartData}/>
+      <Column3D data={stars}/>
       <Doughnut2D data={mostPopular}/>
       <Bar3D data={chartData} /> 
     </Wrapper>
