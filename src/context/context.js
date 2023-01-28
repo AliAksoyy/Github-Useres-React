@@ -10,10 +10,19 @@ const rootUrl = 'https://api.github.com';
 const GithubContext=createContext()
 
 const GithubProvider =({children})=> {
+
     const [githubUser,setGithubUser]=useState(mockUser)
     const [repos,setRepos]=useState(mockRepos)
     const [followers,setFollowers]=useState(mockFollowers)
-    return (<GithubContext.Provider value={{githubUser,repos,followers}}>{children}</GithubContext.Provider>)
+    const [request,setRequest]=useState(0)
+    const [loading, setLoading] = useState(false)
+    
+    useEffect(()=>{checkRequest()},[])
+    const checkRequest=()=>{
+        axios(`${rootUrl}/rate_limit`).then(({data})=>setRequest(data))
+    }
+
+    return (<GithubContext.Provider value={{githubUser,repos,followers,request}}>{children}</GithubContext.Provider>)
 }
 
 export {GithubProvider,GithubContext}

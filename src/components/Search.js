@@ -8,15 +8,13 @@ import { GithubContext } from '../context/context';
 
 const Search = () => {
   const [user,setUser]=useState("")
+  
 
   const handleSubmit=(e)=> {
     e.preventDefault()
-    console.log(user)
     setUser("")
   }
-  const {repos}=useContext(GithubContext)
-
-
+  
   return <section className='section'>
     <Wrapper className='section-center'>
       <form className="form-control" onSubmit={handleSubmit}>
