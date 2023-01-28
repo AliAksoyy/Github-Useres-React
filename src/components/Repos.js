@@ -28,12 +28,22 @@ const Repos = () => {
     return  {...item, value:item.stars}
    }).slice(0,5)
 
+   let {stars,forks}=repos.reduce((total,item)=> {
+    const {stargazers_count,name,forks}=item
+    total.stars[stargazers_count]={label:name,value:stargazers_count}
+    total.forks[stargazers_count]={label:name, value:forks}
+    return total
+   },{stars:{},forks:{}})
+   console.log(stars)
+   console.log(forks)
+
+
   return <section className='section'>
     <Wrapper className='section-center'>
       <Pie3D data={mostUsed} />
-      <Column3D />
+      <Column3D data={chartData}/>
       <Doughnut2D data={mostPopular}/>
-      {/* <Bar3D data={chartData} />  */}
+      <Bar3D data={chartData} /> 
     </Wrapper>
   </section>
   
