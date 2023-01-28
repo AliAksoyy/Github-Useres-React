@@ -4,7 +4,7 @@ import { GithubContext } from '../context/context';
 import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts';
 const Repos = () => {
   const {repos}=useContext(GithubContext)
-
+console.log(repos)
   
   let chartData=repos.reduce((total,item)=> {
     const {language,stargazers_count}=item
@@ -34,7 +34,9 @@ const Repos = () => {
     total.forks[stargazers_count]={label:name, value:forks}
     return total
    },{stars:{},forks:{}})
+   console.log(forks)
    stars=Object.values(stars)
+   forks=Object.values(forks)
 
 
   return <section className='section'>
@@ -42,7 +44,7 @@ const Repos = () => {
       <Pie3D data={mostUsed} />
       <Column3D data={stars}/>
       <Doughnut2D data={mostPopular}/>
-      <Bar3D data={chartData} /> 
+      <Bar3D data={forks} /> 
     </Wrapper>
   </section>
   
