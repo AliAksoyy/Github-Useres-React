@@ -6,7 +6,9 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={< Dashboard />}/>
+      <Route path="/" element={< PrivateRoute />}>
+        <Route index element={<Dashboard />} />
+      </Route>
       <Route path="/login" element={<Login />}/>
       <Route path="*" element={<Error />}/>
     </Routes>
