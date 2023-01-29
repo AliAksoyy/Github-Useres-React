@@ -26,7 +26,7 @@ const Wrapper = styled.section`
     text-align: center;
   }
   img {
-    margin-bottom: 2rem;
+    margin:2rem auto;    
   }
   h1 {
     margin-bottom: 1.5rem;

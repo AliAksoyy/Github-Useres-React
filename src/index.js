@@ -12,10 +12,11 @@ root.render(
     <Auth0Provider
     domain='dev-7ukt26sro2rg6xu2.us.auth0.com'
     clientId='SzxMuEeBLZkvyd7UuvC3QHiijpRERSYp'
-    redirectUri={window.location.origin}>
-        <GithubProvider>
-            <App />
-        </GithubProvider>
+    redirectUri={window.location.origin}
+    cacheLocation="localstorage">
+    <GithubProvider>
+      <App />
+    </GithubProvider>
     </Auth0Provider>
 );
 
