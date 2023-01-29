@@ -26,7 +26,7 @@ const Wrapper = styled.section`
   display: grid;
   place-items: center;
   img {
-    width: 150px;
+    width: 350px;
   }
 `;
 
