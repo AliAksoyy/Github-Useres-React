@@ -7,6 +7,7 @@ import styled from 'styled-components';
 function AuthWrapper({children}) {
 
   const {isLoading,error}=useAuth0()
+  console.log(isLoading,error);
   if(isLoading){
     return <Wrapper>
       <img src={loadingGif} alt="load" />
