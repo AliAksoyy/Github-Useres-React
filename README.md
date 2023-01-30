@@ -1,115 +1,163 @@
-## Starter Project
+<h1 align="center">Github Users App</h1>
 
-- css provided (global styles, styled components)
-- folders/files already setup
-- all imports included (warnings)
-- index.js for easier imports
+<h3>Overview</h3>
+👨‍💻 In this project I mastered React skills. I used mainly REACT and Styled Components, React Router, React Icons, Context API, Axios React/Auth0, React/FusionCharts, React/Toastify. You can see visual demo of the website below. The objective is to build out this real-like webpage and make it looking as professional as possible..
+<hr>
 
-## Styled Components
+## ✨ Demo
 
-[Styled-Components - Main Docs](https://styled-components.com/)
+ <p align="center">
+  <img width="700" align="center" src="./public/gif/maker.gif" alt="demo"/>   
+</p>
 
-```jsx
-import styled from "styled-components";
+<!-- ![Alt text](https://giphy.com/peekasso)  -->
 
-const ReactComponent = () => {
- // logic here
- return <Wrapper>
- {some content}
- </Wrapper>
-}
+<hr>
+
+[📍You can see the live site from here!](https://stock-app-react-weld.vercel.app/)
+
+<!-- ------------------------------------------------------ -->
+````
+## Project Skeleton 
+
+- MyBlog App (folder)
+|
+|----readme.md         
+SOLUTION
+├── public
+│     └── index.html
+├── src
+│    ├── router
+│    ├── components
+│    │       ├── Charts
+|    |       |    |----- Bar3D.js
+|    |       |    |----- Column3D.js
+|    |       |    |----- Dougnut2d.js
+|    |       |    |----- Example.js
+|    |       |    |----- index.js
+|    |       |    |----- Pie3D.js
+│    │       |---- Card.js
+│    │       |---- Followers.js
+│    │       |---- LoginForm.jsx
+│    │       |---- index.js
+│    │       |---- Info.js
+│    │       |---- Navbar.js
+│    │       |---- Repos.js
+│    │       |---- Search.js
+│    │       |---- User.js
+│    ├── images
+│    │       ├── authSlice.js
+│    ├── helpers
+│    │       └── login-img.svg
+│    ├── pages
+│    │       ├── Dashboard.js
+│    │       ├── AuthWrapper.js
+│    │       ├── Login.jsx
+│    │       ├── Error.js
+│    │       ├── index.js
+│    │       ├── Login.js
+│    │       └── PrivateRouter.js
+│    ├── context
+│    │       └── context.js
+│    ├── app
+│    │    └── store.jsx
+│    ├── App.js
+│    ├── index.js
+│    └── index.css
+├── package.json
+├── gitignore
+└── yarn.lock
+```
+````
+<!-- --------------------------------------- -->
+### Purpose of Project;
+
+👨‍💻 The main aim of this project is to improve my <b>REACT Context API, Authenticated Auth0, Component/JS/git commands (push, pull, commit, add etc.) skills and responsive design abilities</b>.
 
 
-const Wrapper = styled.htmlElement`
-write your styles here
-`
-export default ReactComponent
+## Objective
+
+🎯
+
+### The project covers;
+
+- HTML / Semantic elements 
+
+- Styled Components - React Toastify 
+
+- REACT / Components , Props , Hooks , Router, Context  etc.
+
+- Auth0 Authenticated
+
+- React / FusionCharts
+  
+- Axios 
+
+
+### At the end of the project, i will be able to;
+
+- improve coding skills within HTML & CSS & JS & REACT.js
+
+- use git commands (push, pull, commit, add etc.) and Github as Version Control System.
+
+<hr>
+<h3>Used in this project</h3>
+
+👉 HTML tags, Comments, CSS styling, REACT.js etc.
+
+
+<hr>
+<h3>How to Use the Project</h3>
+<span>First download a code editor </span>
+<br><span>Second open the files : </span><a href='https://github.com/AliAksoyy/Github-Useres-React'>My Docs</a>
+<br><span>You should open vscode terminal and write "yarn or npm install" to make the project alive </span>
+<br><span>You can use this tutorial : </span><a href='https://www.youtube.com/watch?v=fJEbVCrEMSE'>VS Code tutorial</a>
+
+
+<!-- ------------------------------------------------------------------------- -->
+<!-- ## 🚀 Usage
+
+Make sure you have [npx](https://www.npmjs.com/package/npx) installed (`npx` is shipped by default since npm `5.2.0`)
+
+Just run the following command at the root of your project and answer questions:
+
+```sh
+npx readme-md-generator
 ```
 
-## React Icons
+Or use default values for all questions (`-y`):
 
-[React Icons - Main Docs](https://react-icons.github.io/react-icons/)
-
-```jsx
-import { FiUsers, FiUserPlus } from 'react-icons/fi';
-<FiUsers className='nameOfTheClass'> </FiUsers>;
+```sh
+npx readme-md-generator -y
 ```
 
-## React Router Dom
+Use your own `ejs` README template (`-p`):
 
-version used - "react-router-dom": "^5.2.0",
-
-- [react-router-dom - Main Docs](https://reactrouter.com/web/guides/quick-start)
-
-- <Switch> renders the first child <Route> that matches
-- A <Route path="*"> always matches
-
-## Gihthub API
-
-- [Root Endpoint](https://api.github.com)
-- [Get User](https://api.github.com/users/wesbos)
-- [Repos](https://api.github.com/users/john-smilga/repos?per_page=100)
-- [Followers](https://api.github.com/users/john-smilga/followers)
-- [Rate Limit](https://api.github.com/rate_limit)
-
-  For unauthenticated requests, the rate limit allows for up to 60 requests per hour. Unauthenticated requests are associated with the originating IP address, and not the user making requests.
-
-## Fusion Charts
-
-- [Fusion Charts - Main Docs](https://www.fusioncharts.com/)
-- [First React Chart](https://www.fusioncharts.com/dev/getting-started/react/your-first-chart-using-react)
-- [List Of Charts](https://www.fusioncharts.com/dev/chart-guide/list-of-charts)
-- [Themes](https://www.fusioncharts.com/dev/themes/introduction-to-themes)
-
-## Auth0
-
-- [Auth0 - Main Docs](https://auth0.com/)
-
-- Create Application
-- Choose : Single Page Web Applications
-- Choose : React
-- Go to Settings Tab
-- Copy/Paste Domain, ClientID - can be public (or use .env)
-- Add Domain -
-  for now http://localhost:3000 (DON'T COPY PASTE FROM URL BAR)
-
-  - Allowed Callback URLs
-  - Allowed Logout URLs
-  - Allowed Web Origins
-  - SAVE CHANGES!!!!!!!!!!!!!!!
-
-- Connections
-  email,social
-
-- [React SDK Docs](https://auth0.com/docs/libraries/auth0-react)
-- [REACT SDK API Docs](https://auth0.github.io/auth0-react/)
-
-## Deployment
-
-[Netlify](https://www.netlify.com/)
-
-## Additional Info
-
-#### Redirects with react-router-dom
-
-In order for routing to work on netlify, redirects was added to the public folder
-
-- \_redirects file in public
-
+```sh
+npx readme-md-generator -p path/to/my/own/template.md
 ```
 
-/*    /index.html   200
+You can find [ejs README template examples here](https://github.com/kefranabg/readme-md-generator/tree/master/templates). -->
 
-```
+<!-- -------------------------------------------------------------------------- -->
 
-[Redirects Blog Post](https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc)
+<!-- ## Code Contributors
 
-#### Warnings and create-react-app
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/kefranabg/readme-md-generator/graphs/contributors"><img src="https://opencollective.com/readme-md-generator/contributors.svg?width=890&button=false" /></a>
+ -->
 
-package.json
+<!-- ## 🤝 Contributing
 
-```js
-"build": "CI= react-scripts build",
-```
+Contributions, issues and feature requests are welcome.<br />
+Feel free to check [issues page](https://github.com/kefranabg/readme-md-generator/issues) if you want to contribute.<br />
+[Check the contributing guide](./CONTRIBUTING.md).<br /> -->
 
-[create-react-app Warning Fix Blog Post](https://community.netlify.com/t/how-to-fix-build-failures-with-create-react-app-in-production/17752)
+
+<!-- ------------------------------------------------------------------------------------- -->
+## Author
+
+👤 **Ali Aksoy**
+
+- Twitter: [@alifeyza4017](https://twitter.com/alifeyza4017)
+- Github: [@AliAksoyy](https://github.com/AliAksoyy)
