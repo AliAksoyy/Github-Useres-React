@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import { GithubProvider } from './context/context';
 import { Auth0Provider } from '@auth0/auth0-react';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer} from 'react-toastify';
 
 
 
@@ -16,6 +18,7 @@ root.render(
     cacheLocation="localstorage">
     <GithubProvider>
       <App />
+      <ToastContainer />
     </GithubProvider>
     </Auth0Provider>
 );

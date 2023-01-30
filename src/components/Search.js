@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { MdSearch } from 'react-icons/md';
 import { GithubContext } from '../context/context';
+import warningToast from '../helpers/toast';
 
 
 
@@ -15,6 +16,7 @@ const Search = () => {
     e.preventDefault()
     if(user){
       searchGithubUser(user)
+      warningToast("new user successful")
       setUser("")
     }
   }

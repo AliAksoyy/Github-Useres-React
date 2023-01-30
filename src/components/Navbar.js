@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useAuth0 } from '@auth0/auth0-react';
+import warningToast from '../helpers/toast';
 
 
 const Navbar = () => {
@@ -12,7 +13,7 @@ const Navbar = () => {
   {isUser && user.picture && <img src={user.picture} alt={user.name} />}
   {isUser && user.name && (<h4>Wellcome, <strong>{user.name.toUpperCase()}</strong></h4>)}
   {!isUser ?  <button onClick={loginWithRedirect}>Login</button> :
-  <button onClick={()=>logout({returnTo:window.location.origin})}>logout</button>
+  <button onClick={()=>{logout({returnTo:window.location.origin}); warningToast("logout successful")}}>logout</button>
    }
   </Wrapper>;
 };

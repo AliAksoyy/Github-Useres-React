@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import styled from 'styled-components';
 import loginImg from '../images/login-img.svg';
+import warningToast from '../helpers/toast';
 
 const Login = () => {
 
@@ -12,7 +13,7 @@ const Login = () => {
     <div className="container">
       <img src={loginImg} alt="github user" />
       <h1>github user</h1>
-      <button className='btn' onClick={loginWithRedirect}>Login / Sign Up</button>
+      <button className='btn' onClick={()=>{loginWithRedirect(); warningToast("login successful")}}>Login / Sign Up</button>
     </div>
   </Wrapper>;
 };
