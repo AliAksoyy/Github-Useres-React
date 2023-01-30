@@ -13,7 +13,7 @@ const Navbar = () => {
   {isUser && user.picture && <img src={user.picture} alt={user.name} />}
   {isUser && user.name && (<h4>Wellcome, <strong>{user.name.toUpperCase()}</strong></h4>)}
   {!isUser ?  <button onClick={loginWithRedirect}>Login</button> :
-  <button onClick={()=>{logout({returnTo:window.location.origin}); warningToast("logout successful")}}>logout</button>
+  <button onClick={()=>{logout({returnTo:window.location.origin}); warningToast("logout successfull")}}>logout</button>
    }
   </Wrapper>;
 };
